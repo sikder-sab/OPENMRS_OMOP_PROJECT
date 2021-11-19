@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:gMHEEs1/w8+ypBCxYAao6N1ERqNMBK+Y+xvVcNGU" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:kCVRsN+l5pJ7HDcIEj1FmjJB9HTiO7n5BY/HBg27" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Js7TNTLbppwWM+FYBvinpban5Qa8bXSiXATD0Cd+" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XckuF+Rxq6BDws42WtktBicvEjP/0d8kx8nP5+c4" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -116,13 +116,13 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;openmrs&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FCs21CCoityIzkcwdCtwTDty0Nse3CZIZniZSq6wuMOa"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LtpqRR9GvdeFQ8WtcbYgF+mbAIB7FiYpfJTjZxKVTfs1"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select obs.obs_id, obs.person_id, obs.concept_id, temp.new_code, obs_datetime, value_numeric, value_text, value_datetime, value_drug, value_coded, provider_id&#xD;&#xA;from obs&#xD;&#xA;left outer join encounter&#xD;&#xA;on obs.encounter_id = encounter.encounter_id&#xD;&#xA;left outer join encounter_provider&#xD;&#xA;on encounter.encounter_id = encounter_provider.encounter_id&#xD;&#xA;left outer join (&#xD;&#xA;select distinct c.concept_id, cn.name as conceptName, cmt.name as relationship, crs.name as source, crt.code as new_code&#xD;&#xA;from concept c, concept_name cn, concept_reference_map crm, concept_reference_term crt, concept_map_type cmt, concept_reference_source crs&#xD;&#xA;where&#xD;&#xA;c.concept_id = cn.concept_id and c.concept_id = crm.concept_id and crm.concept_reference_term_id = crt.concept_reference_term_id&#xD;&#xA;and crm.concept_map_type_id = cmt.concept_map_type_id&#xD;&#xA;and crt.concept_source_id = crs.concept_source_id&#xD;&#xA;and cn.locale = \&quot;en\&quot; and cn.locale_preferred = 1&#xD;&#xA;and crs.name = \&quot;SNOMED CT\&quot;&#xD;&#xA;) as temp&#xD;&#xA;on temp.concept_id = obs.concept_id&#xD;&#xA;limit 1000&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select obs.obs_id, obs.person_id, obs.concept_id, temp.new_code, obs_datetime, value_numeric, value_text, value_datetime, value_drug, value_coded, provider_id&#xD;&#xA;from obs&#xD;&#xA;left outer join encounter&#xD;&#xA;on obs.encounter_id = encounter.encounter_id&#xD;&#xA;left outer join encounter_provider&#xD;&#xA;on encounter.encounter_id = encounter_provider.encounter_id&#xD;&#xA;left outer join (&#xD;&#xA;select distinct c.concept_id, cn.name as conceptName, cmt.name as relationship, crs.name as source, crt.code as new_code&#xD;&#xA;from concept c, concept_name cn, concept_reference_map crm, concept_reference_term crt, concept_map_type cmt, concept_reference_source crs&#xD;&#xA;where&#xD;&#xA;c.concept_id = cn.concept_id and c.concept_id = crm.concept_id and crm.concept_reference_term_id = crt.concept_reference_term_id&#xD;&#xA;and crm.concept_map_type_id = cmt.concept_map_type_id&#xD;&#xA;and crt.concept_source_id = crs.concept_source_id&#xD;&#xA;and cn.locale = \&quot;en\&quot; and cn.locale_preferred = 1&#xD;&#xA;and crs.name = \&quot;SNOMED CT\&quot;&#xA;and cmt.name = \&quot;SAME-AS\&quot;&#xD;&#xA;) as temp&#xD;&#xA;on temp.concept_id = obs.concept_id&#xD;&#xA;limit 1000&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -301,7 +301,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;op1&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;barry&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NdbxHRRiBv8FLqCsm/wfiD/9baVEPkPPHJXZaTxj6JJO"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:O20zYm4Dq/zmZs2F50seLaH0gj/Q9ksobOi1owQfbeHT"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;concept&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -567,7 +567,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;openmrs&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9uiWwLQrIQpVTI96+umHcWh2R0Z5l/43IOuhlG3FAV/T"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XES6uCM7gLAUUsK30RZEW68sgDnFcj3Ag4IXWWUE5gPR"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -617,7 +617,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;openmrs&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XgXTXwiCe9dJ1DbXz95hFcAuWVzu9Rd2tiZi5JHYZMkn"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gL6qfPrzU4vkCsFZ4VMW6fzWC0Pa4XS63jeSHDPvFs9B"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -716,7 +716,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;op1&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;barry&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zAWDpkL8mxfSynOBFynITCQpMU+aJ4vQOwxlK7BexFYG"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/24x+D7U6PWya15axwZEnIfuYVi5IqbfY2uRqXLJv2SL"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_BUjJ4C1REeyk2soxX5lSJA - concept" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;concept&quot;"/>
@@ -803,7 +803,7 @@
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;barry&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nyGTzctJdEOMCYJvHTF3+0WXWezF8L39JLgq2J7iXTNG"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:virlsuwgkXU75TxFMS310+8FmNu37cyRnqht0qWkWt8Q"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;observation&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -1085,7 +1085,21 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="concept_input" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="log_output_data" lineStyle="0" metaname="log_output_data" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tLogRow_1">
+  <connection connectorName="FLOW" label="data_to_postgresql_obs_table" lineStyle="0" metaname="data_to_postgresql_obs_table" offsetLabelX="12" offsetLabelY="-24" outputId="1" source="tMap_2" target="tDBOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="value_as_concept_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="data_to_postgresql_obs_table" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="test_log" lineStyle="0" metaname="test_log" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="test_log" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="log_output_data" lineStyle="0" metaname="log_output_data" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="value_as_number"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1142,20 +1156,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="log_output_data" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="data_to_postgresql_obs_table" lineStyle="0" metaname="data_to_postgresql_obs_table" offsetLabelX="12" offsetLabelY="-24" outputId="2" source="tMap_2" target="tDBOutput_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="value_as_concept_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="data_to_postgresql_obs_table" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="test_log" lineStyle="0" metaname="test_log" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tLogRow_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="test_log" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
