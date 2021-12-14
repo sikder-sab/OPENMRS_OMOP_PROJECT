@@ -19,4 +19,7 @@ Note: you could also apply the constraints and/or the indexes before loading the
 
 6. Repeat steps 1-3, executing the script `OMOP CDM Results postgresql ddl.txt`
 
+
+
+
 These guidelines were extrated directly from the historial OHDSI GitHub repo https://github.com/OHDSI/CommonDataModel/tree/v5-historical/PostgreSQL.
