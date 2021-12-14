@@ -18,3 +18,5 @@ In order to create your instantiation of the Common Data Model, we recommend fol
 Note: you could also apply the constraints and/or the indexes before loading the data, but this will slow down the insertion of the data considerably.
 
 6. Repeat steps 1-3, executing the script `OMOP CDM Results postgresql ddl.txt`
+
+These guidelines were extrated directly from the historial OHDSI GitHub repo https://github.com/OHDSI/CommonDataModel/tree/v5-historical/PostgreSQL.
